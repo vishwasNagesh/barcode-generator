@@ -1,0 +1,20 @@
+{
+  "name": "nodebarcode",
+  "version": "1.0.0",
+  "description": "This gives you barcode generated either in the form of file or buffer",
+  "main": "index.js",
+  "dependencies": {
+    "canvas": "^1.6.12",
+    "bluebird": "^3.5.2",
+    "jsbarcode": "^3.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "barcode"
+  ],
+  "author": "Vishwas",
+  "license": "ISC"
+}
