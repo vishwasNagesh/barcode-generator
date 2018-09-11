@@ -68,15 +68,3 @@ var methods = {
 };
 
 module.exports = methods;
-
-methods.getFile('13234234', 'CODE39', __dirname, 'output', 'barcode.png').then(function(result) {
-	console.dir(result);
-}).catch(function(err) {
-	console.log('err: ' + err);
-});
-
-methods.getBuffer('13234234', 'CODE39').then(function(result) {
-	console.dir(result);
-}).catch(function(err) {
-	console.log('err: ' + err);
-});
