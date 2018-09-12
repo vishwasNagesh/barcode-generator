@@ -32,10 +32,9 @@ var methods = {
 	 */
 	getBuffer: function(valueToGenrate, barcodeType) {
 		return new Promise(function(resolve, reject) {
-			useJsBarcode().then(function(buffer) {
+			useJsBarcode(valueToGenrate, barcodeType).then(function(buffer) {
 				resolve(buffer);
 			}).catch(function(err) {
-				console.log('err: ' + err);
 				reject(err);
 			});
 		});
@@ -56,11 +55,9 @@ var methods = {
 				fs.writeFileAsync(outfile, buffer).then(function(result) {
 					resolve('created')
 				}).catch(function(err) {
-					console.log('err: ' + err);
 					reject(err);
 				});
 			}).catch(function(err) {
-				console.log('err: ' + err);
 				reject(err);
 			});
 		});
@@ -68,3 +65,9 @@ var methods = {
 };
 
 module.exports = methods;
+
+methods.getBuffer('1234234gfgd', 'CODE39').then(function(result) {
+	console.dir(result);
+}).catch(function(err) {
+
+});
